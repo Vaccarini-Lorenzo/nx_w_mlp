@@ -1,0 +1,42 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment variables (keep the example shareable)
+.env
+.env.*
+!.env.example
+
+# Packaging and coverage output
+build/
+dist/
+*.egg-info/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter checkpoints (keep notebooks tracked)
+.ipynb_checkpoints/
+
+# Model checkpoints and experiment output
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+runs/
+wandb/
+*.log
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
