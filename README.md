@@ -1,4 +1,4 @@
-# makemore_mlp
+# nx_w_mlp
 
 A PyTorch experiment to play with **multilayer perceptrons (MLPs)** and neural language modeling, based on Bengio et al.'s *A Neural Probabilistic Language Model* (2003).
 
@@ -14,19 +14,6 @@ Context tokens -> Learned embeddings -> MLP -> Next-token probabilities
 
 The goal is to learn the embeddings and prediction network together, and experiment with how context size, embedding size, and hidden-layer size affect the model.
 
-## Setup
-
-Create and activate a Python virtual environment, then install PyTorch:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install torch
-```
-
-On Windows PowerShell, activate the environment with `.venv\Scripts\Activate.ps1` instead. For platform-specific PyTorch packages, including CUDA support, use the [official installation guide](https://pytorch.org/get-started/locally/).
-
-Training and sampling code is not included yet.
 
 ## Reference
 
