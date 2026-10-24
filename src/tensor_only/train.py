@@ -67,12 +67,12 @@ class Trainer:
                 loss = F.cross_entropy(logits, targets)
                 loss.backward()
                 if loss < previous_loss:
+                    print(f"Decreased loss: Saving - Delta: {previous_loss - loss:.4f}")
                     previous_loss = loss
-                    print("Decreased loss: Saving")
                     self.model.save()
                 self.model.update_params()
 
 
 if __name__ == "__main__":
     trainer = Trainer(config, "/Users/lorenzovaccarini/Desktop/Projects/nx_w_mlp/data/vocab.txt", "/Users/lorenzovaccarini/Desktop/Projects/nx_w_mlp/data/training/brown.txt", 10000, True)
-    trainer.train_epochs(50)
+    trainer.train_epochs(10)
