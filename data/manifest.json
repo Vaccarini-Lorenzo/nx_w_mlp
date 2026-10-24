@@ -1,0 +1,58 @@
+{
+  "dataset": "Brown corpus, NLTK Form C; locally prepared learning variant",
+  "exact_bengio_2003_preprocessing": false,
+  "source_url": "https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/brown.zip",
+  "source_archive": "raw/brown.zip",
+  "source_archive_sha256": "9b275f9b3b95d7bd66ccfb7cd259f445a13bbe5d1f4107aba09fd3e8364bafa6",
+  "source_documents": 500,
+  "document_order": "Lexicographic archive path order, ca01 through cr09",
+  "source_token_count": 1161192,
+  "source_unique_tokens": 56057,
+  "case_sensitive": true,
+  "punctuation_preserved": true,
+  "pos_tags_removed": true,
+  "token_extraction": "Split on whitespace; remove POS suffix after final slash",
+  "boundary_tokens_added": false,
+  "shuffle": false,
+  "split_unit": "Contiguous tokens; splits can cut a sentence or document",
+  "vocabulary_path": "vocab.txt",
+  "vocabulary_entries": 17000,
+  "vocabulary_fit_split": "train",
+  "vocabulary_order": "Unknown first, then descending training frequency; lexical tie break",
+  "unknown_token": "<unk>",
+  "unknown_index": 0,
+  "minimum_selected_training_frequency": 3,
+  "file_format": "UTF-8, one token per line; vocabulary line number minus one is token ID",
+  "splits": {
+    "train": {
+      "path": "training/brown.txt",
+      "tokens": 800000,
+      "unknown_tokens": 37440,
+      "unknown_fraction": 0.0468,
+      "sha256": "e42a458e0e7e6d0b8c4ac964b94f2eae5b3ce42fa46b3b7554263275e7629502"
+    },
+    "validation": {
+      "path": "eval/brown_validation.txt",
+      "tokens": 200000,
+      "unknown_tokens": 16840,
+      "unknown_fraction": 0.0842,
+      "sha256": "7c86ef8a576b5d8369e030f54a0fea794688b51a41171b8ba2dce0c23cf9a5dc"
+    },
+    "test": {
+      "path": "eval/brown_test.txt",
+      "tokens": 161192,
+      "unknown_tokens": 13527,
+      "unknown_fraction": 0.08391855675219614,
+      "sha256": "9dffa4bd22db0bbe378876e4000e525a72feaf6ac8d304f1e668aebc4df09014"
+    }
+  },
+  "reference_paper": "https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf",
+  "reference_brown_stats": {
+    "tokens": 1181041,
+    "train_tokens": 800000,
+    "validation_tokens": 200000,
+    "test_tokens": 181041,
+    "vocabulary_entries": 16383,
+    "rare_word_rule": "Frequency <= 3 merged into one symbol"
+  }
+}
