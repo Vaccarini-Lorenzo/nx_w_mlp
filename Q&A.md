@@ -26,6 +26,7 @@ This can happen because both embeddings are processed by the same prediction net
 **Training can discover this arrangement, but does not explicitly require their embeddings to become close.**
 
 ### So the embedding layer is just a trick to manage the "curse of dimensions"?
-Not really.
-I mean, that too but if that was the entire goal of such layer, we could just keep it random (possibly with an uniform distribution to spread words as much as possible).
+Kind of.
 The **central** idea of this paper is to show that learning useful relationship between words helps with goal of predicting the next word.
+We basically want to be able to predict the fourth word given the first 3. In other words we want `P(fourth | <first, second, third>)`.
+The problem is that with a dictionary of 17k words we have 17000^3 possible contexts, most of them will be never be seen in the training data. So how are we fixing this? We try to find correlation between words in order to approximate the probability distribution.
